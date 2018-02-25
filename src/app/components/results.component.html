@@ -1,0 +1,34 @@
+<label>{{search.pagination.total_count}} results!</label><br>
+<label>{{totalPage}} pages!</label>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table" border="1">
+      <thead>
+          <tr>
+            <th>GIF:</th>
+            <th>GIF URL:</th>
+            <th>Source:</th>
+            <th></th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor = "let s of dataSearch">
+          <td>
+            <img src = "{{s.images.downsized.url}}" width="300" height="200">
+          </td>
+          <td>
+            <code>{{ s.url }}</code>
+          </td>
+          <td>
+            <code>{{ s.source }}</code>
+          </td>
+          <td>
+            <button type="submit" >Save</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
